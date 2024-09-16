@@ -1,125 +1,123 @@
 # CondoMaster
 
-**CondoMaster** é um sistema completo de administração para síndicos de condomínios, incluindo versões para web, mobile, e desktop, além de uma página one-page para pesquisa, venda e marketing. O projeto utiliza C# como linguagem principal e é desenvolvido com ASP.NET Core, Xamarin e WPF/WinForms.
+**CondoMaster** é uma plataforma completa de administração para síndicos de condomínios, com suporte a versões mobile, desktop e web. A aplicação oferece uma interface intuitiva e ferramentas poderosas para auxiliar na gestão de condomínios.
+
+## Tecnologias Utilizadas
+- **Front-end:** Vue.js
+- **Back-end:** Python (Flask/Django)
+- **API:** Python (Flask/Django)
+- **Banco de Dados:** MySQL
+- **Desktop:** C# com WPF/WinForms
+- **Mobile:** Xamarin (C#)
+- **OnePage e Site Institucional:** Bootstrap
 
 ## Estrutura do Projeto
 
 ```
-CondoMaster/
+/CondoMaster
 │
-├── Frontend/
-│   ├── Web/                # Projeto ASP.NET Core para a versão web
-│   │   ├── wwwroot/        # Arquivos estáticos como CSS, JS, imagens
-│   │   ├── Controllers/    # Controladores do ASP.NET Core
-│   │   ├── Models/         # Modelos de dados
-│   │   ├── Views/          # Views do ASP.NET Core
-│   │   ├── wwwroot/        # Arquivos públicos estáticos
-│   │   ├── Startup.cs      # Configurações e inicialização
-│   │   └── Program.cs      # Entry point da aplicação
-│   │
-│   ├── Mobile/             # Projeto Xamarin para a versão mobile
-│   │   ├── Views/          # Views e páginas
-│   │   ├── Models/         # Modelos de dados
-│   │   ├── Services/       # Serviços e lógica de negócios
-│   │   ├── Resources/      # Recursos estáticos
-│   │   └── App.xaml         # Configurações e inicialização
-│   │
-│   └── Desktop/            # Projeto WPF/WinForms para a versão desktop
-│       ├── Views/          # Views e interfaces
-│       ├── Models/         # Modelos de dados
-│       ├── ViewModels/     # ViewModels para MVVM
-│       ├── Resources/      # Recursos estáticos
-│       └── App.xaml         # Configurações e inicialização
+├── /frontend          # Aplicação Frontend Vue.js
+│   ├── /public        # Arquivos públicos (imagens, ícones, etc.)
+│   ├── /src           # Código-fonte da aplicação
+│   │   ├── /assets    # Estilos e assets como CSS, imagens
+│   │   ├── /components # Componentes Vue.js
+│   │   ├── /views     # Páginas Vue.js
+│   │   ├── App.vue    # Componente raiz
+│   │   ├── main.js    # Arquivo principal da aplicação
+│   └── package.json   # Dependências do projeto Vue.js
 │
-├── Backend/
-│   ├── API/                # Projeto ASP.NET Core para a API
-│   │   ├── Controllers/    # Controladores da API
-│   │   ├── Models/         # Modelos de dados
-│   │   ├── Services/       # Serviços e lógica de negócios
-│   │   ├── Repositories/   # Acesso a dados
-│   │   ├── DTOs/           # Data Transfer Objects
-│   │   ├── Startup.cs      # Configurações e inicialização
-│   │   └── Program.cs      # Entry point da aplicação
-│   │
-│   └── Database/           # Scripts e configurações do banco de dados
-│       ├── Migrations/     # Scripts de migração
-│       ├── SeedData/       # Dados iniciais para o banco de dados
-│       └── Context.cs      # Contexto do Entity Framework
+├── /backend           # Aplicação Backend Python (API)
+│   ├── /app           # Código-fonte do backend
+│   │   ├── /models    # Modelos do banco de dados
+│   │   ├── /routes    # Rotas da API
+│   │   ├── /controllers # Lógica de negócio
+│   │   ├── __init__.py # Inicializador do app Flask/Django
+│   ├── requirements.txt # Dependências do Python
+│   └── manage.py      # Arquivo de entrada do framework
 │
-├── Docs/                   # Documentação do projeto
-│   ├── Design/             # Documentos de design e arquitetura
-│   ├── UserGuide/          # Guias de usuário
-│   └── API_Docs/           # Documentação da API
+├── /database          # Scripts e Configurações do Banco de Dados
+│   ├── schema.sql     # Estrutura do banco de dados MySQL
+│   ├── migrations/    # Migrações de banco de dados
 │
-└── Marketing/              # Arquivos e conteúdo para marketing e vendas
-    ├── LandingPage/        # One-page para pesquisa e marketing
-    ├── Assets/             # Imagens e materiais de marketing
-    └── Content/            # Textos e descrições
+├── /docs              # Documentação do Projeto
+│   ├── README.md      # Informações gerais do projeto
+│   ├── API.md         # Documentação da API
+│
+├── /tests             # Testes automatizados para backend e frontend
+│   ├── /unit          # Testes unitários
+│   ├── /integration   # Testes de integração
+│
+├── /config            # Arquivos de configuração
+│   ├── .env           # Variáveis de ambiente (configuração da API, banco, etc.)
+│   └── settings.py    # Configurações gerais do app (backend)
+│
+└── docker-compose.yml # Arquivo Docker para configuração de ambientes (opcional)
 ```
 
+## Funcionalidades
+- Gestão completa de condomínios, com controle de unidades, moradores e despesas.
+- Ferramentas de comunicação entre síndicos e condôminos.
+- Versão mobile para gestão em tempo real.
+- Dashboard intuitiva com relatórios e gráficos.
+- Integração com banco de dados relacional MySQL.
 
-## Cronograma de Desenvolvimento
+## Instalação e Configuração
 
-### 1. Planejamento e Design (2-4 semanas)
-- Definir arquitetura e design do sistema.
-- Criar wireframes e mockups para as interfaces.
-- Planejar banco de dados e estrutura da API.
+### Pré-requisitos
+- **Node.js** (para front-end)
+- **Python 3.8+** (para back-end)
+- **MySQL** (para banco de dados)
+- **.NET SDK** (para aplicação desktop e mobile)
+- **Docker** (opcional, para ambiente de desenvolvimento)
 
-### 2. Desenvolvimento Backend (4-6 semanas)
-- **Setup e Configuração:**
-  - Configuração do projeto ASP.NET Core para a API.
-  - Configuração do Entity Framework Core e banco de dados.
-- **Implementação:**
-  - Desenvolvimento de Controllers e Services.
-  - Implementação de Repositories e lógica de negócios.
-  - Criação de scripts de migração e seed data.
+### Passos para rodar o projeto
 
-### 3. Desenvolvimento Frontend Web (4-6 semanas)
-- **Setup e Configuração:**
-  - Configuração do projeto ASP.NET Core para o front-end.
-- **Desenvolvimento:**
-  - Criação de layouts e interfaces com Bootstrap.
-  - Implementação de chamadas à API.
+1. **Clone o repositório:**
+    ```bash
+    git clone https://github.com/usuario/CondoMaster.git
+    ```
 
-### 4. Desenvolvimento Mobile (6-8 semanas)
-- **Setup e Configuração:**
-  - Configuração do projeto Xamarin.
-- **Desenvolvimento:**
-  - Criação de Views e ViewsModels.
-  - Implementação de chamadas à API.
+2. **Front-end (Vue.js):**
+    ```bash
+    cd frontend
+    npm install
+    npm run serve
+    ```
 
-### 5. Desenvolvimento Desktop (4-6 semanas)
-- **Setup e Configuração:**
-  - Configuração do projeto WPF/WinForms.
-- **Desenvolvimento:**
-  - Criação de Views e ViewModels.
-  - Implementação de chamadas à API.
+3. **Back-end (Python):**
+    ```bash
+    cd backend
+    python -m venv venv
+    source venv/bin/activate  # ou `venv\Scripts\activate` no Windows
+    pip install -r requirements.txt
+    python manage.py runserver
+    ```
 
-### 6. Testes e QA (4-6 semanas)
-- Testes unitários e de integração para o backend.
-- Testes de interface e usabilidade para web, mobile e desktop.
-- Correção de bugs e ajustes finais.
+4. **Banco de Dados (MySQL):**
+    - Crie o banco de dados e configure as credenciais no arquivo `.env`.
+    ```bash
+    mysql -u root -p
+    CREATE DATABASE condodb;
+    ```
 
-### 7. Implementação e Lançamento (2-4 semanas)
-- Preparação para o lançamento.
-- Configuração de ambientes de produção e staging.
-- Lançamento do site institucional e marketing.
+5. **Testes:**
+    - Para rodar os testes, execute:
+    ```bash
+    cd tests
+    pytest
+    ```
 
-### 8. Manutenção e Suporte Contínuo
-- Monitoramento e manutenção contínuos.
-- Atualizações e melhorias com base no feedback dos usuários.
+## Prazos de Desenvolvimento
 
-## Tecnologias Utilizadas
+| Fase                        | Duração Estimada |
+| --------------------------- | ---------------- |
+| Configuração do Ambiente    | 1 semana         |
+| Front-end Vue.js            | 6 semanas        |
+| Back-end Python e API       | 9 semanas        |
+| Banco de Dados MySQL        | 4 semanas        |
 
-- **Backend:** ASP.NET Core, Entity Framework Core
-- **Frontend Web:** ASP.NET Core, Bootstrap
-- **Mobile:** Xamarin
-- **Desktop:** WPF/WinForms
-- **Banco de Dados:** SQL Server
-
-## Contribuindo
-
-Contribuições são bem-vindas! Para contribuir com o projeto, por favor, abra um pull request ou crie uma issue para discutir mudanças.
+## Contribuição
+Se você deseja contribuir com o projeto, faça um fork do repositório, crie uma branch, e envie seu pull request.
 
 ---
 
