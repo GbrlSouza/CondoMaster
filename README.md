@@ -5,25 +5,21 @@
 ## Estrutura do Projeto
 
 ```
-CondoMaster/
-│
-├── backend/
-│   ├── app.py
-│   ├── config.py
-│   ├── db_connection.py
-│   ├── routes.py
-│   └── models.py
-│
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── views/
-│   │   ├── App.vue
-│   │   └── main.js
-│   └── index.html
-│
-└── README.md
+/condomaster
+  /css
+    - styles.css
+  /js
+    - scripts.js
+  /php
+    - connect.php
+    - reserva_areas.php
+    - chamados.php
+    - gestao_financeira.php
+    - etc...
+  /img
+    - (imagens utilizadas no site)
+  - index.html
+  - readme.md
 ```
 
 ## Funcionalidades
