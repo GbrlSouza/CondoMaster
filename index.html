@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CondoMaster - Gestão de Condomínios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="bg-dark text-white text-center py-3">
+        <h1>CondoMaster</h1>
+        <p>Gerenciamento Completo de Condomínios</p>
+    </header>
+
+    <!-- Menu de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">CondoMaster</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#painel">Painel de Controle</a></li>
+                <li class="nav-item"><a class="nav-link" href="#financeiro">Gestão Financeira</a></li>
+                <li class="nav-item"><a class="nav-link" href="#manutencao">Manutenção</a></li>
+                <li class="nav-item"><a class="nav-link" href="#seguranca">Segurança</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Painel de Controle -->
+    <section id="painel" class="container my-5">
+        <h2 class="text-center">Painel de Controle</h2>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <h3>Gestão Financeira</h3>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#financeiroModal">Acessar</button>
+            </div>
+            <div class="col-md-4 text-center">
+                <h3>Reservas de Áreas Comuns</h3>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#reservasModal">Acessar</button>
+            </div>
+            <div class="col-md-4 text-center">
+                <h3>Manutenção</h3>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#manutencaoModal">Acessar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gestão Financeira Modal -->
+    <div class="modal fade" id="financeiroModal" tabindex="-1" aria-labelledby="financeiroModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="financeiroModalLabel">Gestão Financeira</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="php/gestao_financeira.php" method="POST">
+                        <!-- Campos do formulário financeiro aqui -->
+                        <div class="form-group">
+                            <label for="descricao">Descrição:</label>
+                            <input type="text" class="form-control" id="descricao" name="descricao" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="valor">Valor:</label>
+                            <input type="number" class="form-control" id="valor" name="valor" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="data">Data:</label>
+                            <input type="date" class="form-control" id="data" name="data" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reservas de Áreas Modal -->
+    <div class="modal fade" id="reservasModal" tabindex="-1" aria-labelledby="reservasModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reservasModalLabel">Reservas de Áreas Comuns</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="php/reserva_areas.php" method="POST">
+                        <!-- Campos do formulário de reservas aqui -->
+                        <div class="form-group">
+                            <label for="area">Área:</label>
+                            <input type="text" class="form-control" id="area" name="area" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="data_reserva">Data da Reserva:</label>
+                            <input type="date" class="form-control" id="data_reserva" name="data_reserva" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="usuario">Usuário:</label>
+                            <input type="text" class="form-control" id="usuario" name="usuario" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Salvar Reserva</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Manutenção Modal -->
+    <div class="modal fade" id="manutencaoModal" tabindex="-1" aria-labelledby="manutencaoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="manutencaoModalLabel">Gestão de Manutenção</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="php/chamados.php" method="POST">
+                        <!-- Campos do formulário de chamados de manutenção aqui -->
+                        <div class="form-group">
+                            <label for="descricao_chamado">Descrição do Chamado:</label>
+                            <input type="text" class="form-control" id="descricao_chamado" name="descricao_chamado"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="prioridade">Prioridade:</label>
+                            <select class="form-control" id="prioridade" name="prioridade" required>
+                                <option value="Baixa">Baixa</option>
+                                <option value="Média">Média</option>
+                                <option value="Alta">Alta</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-success">Abrir Chamado</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2024 CondoMaster - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
