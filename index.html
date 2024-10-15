@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CondoMaster - Gestão de Condomínios</title>
+
+    <title>Condomínio - Gestão Completa</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Cabeçalho -->
-    <header class="bg-dark text-white text-center py-3">
-        <h1>CondoMaster</h1>
-        <p>Gerenciamento Completo de Condomínios</p>
-    </header>
 
-    <!-- Menu de Navegação -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">CondoMaster</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,142 +23,261 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#painel">Painel de Controle</a></li>
-                <li class="nav-item"><a class="nav-link" href="#financeiro">Gestão Financeira</a></li>
-                <li class="nav-item"><a class="nav-link" href="#manutencao">Manutenção</a></li>
-                <li class="nav-item"><a class="nav-link" href="#seguranca">Segurança</a></li>
+                <li class="nav-item">
+                    <a class="nav-link text-aqua" href="#sindico">Área do Síndico 🏢</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-aqua" href="#morador">Área do Morador 🏠</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-aqua" href="#avancados">Recursos Avançados 🚀</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-aqua" href="#seguranca">Segurança 🔒</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-aqua" href="./app/login/index.html">Acesso 🔑</a>
+                </li>
             </ul>
         </div>
     </nav>
 
-    <!-- Painel de Controle -->
-    <section id="painel" class="container my-5">
-        <h2 class="text-center">Painel de Controle</h2>
-        <div class="row">
-            <div class="col-md-4 text-center">
-                <h3>Gestão Financeira</h3>
-                <button class="btn btn-primary" data-toggle="modal" data-target="#financeiroModal">Acessar</button>
-            </div>
-            <div class="col-md-4 text-center">
-                <h3>Reservas de Áreas Comuns</h3>
-                <button class="btn btn-primary" data-toggle="modal" data-target="#reservasModal">Acessar</button>
-            </div>
-            <div class="col-md-4 text-center">
-                <h3>Manutenção</h3>
-                <button class="btn btn-primary" data-toggle="modal" data-target="#manutencaoModal">Acessar</button>
+    <!-- Hero Section -->
+    <header class="hero bg-gradient">
+        <div class="container text-center">
+            <h1 class="text-white">Sistema Completo de Gestão Condominial</h1>
+            <p class="text-white">Administração e controle total para síndicos, moradores e administradores.</p>
+        </div>
+    </header>
+
+    <!-- Seção do Síndico -->
+    <section id="sindico" class="py-5">
+        <div class="container">
+            <h2 class="text-grey text-center">Área do Síndico/Administrador 🏢</h2>
+            <p class="lead text-center">Funcionalidades exclusivas para uma gestão eficiente e transparente.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Gestão de Financeiro</h5>
+                            <p class="card-text">Controle de receitas e despesas, relatórios financeiros e orçamentos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Controle de Manutenção</h5>
+                            <p class="card-text">Agendamento de manutenções e acompanhamento de solicitações.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Relatórios de Atividades</h5>
+                            <p class="card-text">Geração de relatórios sobre atividades do condomínio e gestão.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Gestão Financeira Modal -->
-    <div class="modal fade" id="financeiroModal" tabindex="-1" aria-labelledby="financeiroModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="financeiroModalLabel">Gestão Financeira</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+    <!-- Seção do Morador -->
+    <section id="morador" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-aqua text-center">Área do Morador 🏠</h2>
+            <p class="lead text-center text-white">Acesso fácil e rápido a todas as informações do seu condomínio.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card bg-secondary">
+                        <div class="card-body">
+                            <h5 class="card-title">Reservas de Áreas Comuns</h5>
+                            <p class="card-text">Faça suas reservas de salão de festas, churrasqueira e mais.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <form action="php/gestao_financeira.php" method="POST">
-                        <!-- Campos do formulário financeiro aqui -->
-                        <div class="form-group">
-                            <label for="descricao">Descrição:</label>
-                            <input type="text" class="form-control" id="descricao" name="descricao" required>
+                <div class="col-md-4">
+                    <div class="card bg-secondary">
+                        <div class="card-body">
+                            <h5 class="card-title">Reclamações e Sugestões</h5>
+                            <p class="card-text">Registre suas reclamações e sugestões para melhoria do condomínio.</p>
                         </div>
-                        <div class="form-group">
-                            <label for="valor">Valor:</label>
-                            <input type="number" class="form-control" id="valor" name="valor" required>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-secondary">
+                        <div class="card-body">
+                            <h5 class="card-title">Comunicados e Avisos</h5>
+                            <p class="card-text">Fique por dentro de todos os comunicados importantes do condomínio.</p>
                         </div>
-                        <div class="form-group">
-                            <label for="data">Data:</label>
-                            <input type="date" class="form-control" id="data" name="data" required>
-                        </div>
-                        <button type="submit" class="btn btn-success">Salvar</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Reservas de Áreas Modal -->
-    <div class="modal fade" id="reservasModal" tabindex="-1" aria-labelledby="reservasModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="reservasModalLabel">Reservas de Áreas Comuns</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+    <!-- Seção de Recursos Avançados -->
+    <section id="avancados" class="py-5">
+        <div class="container">
+            <h2 class="text-grey text-center">Recursos Avançados 🚀</h2>
+            <p class="lead text-center">Tecnologia de ponta para a gestão eficiente do condomínio.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Análise de Dados</h5>
+                            <p class="card-text">Utilize dados para tomar decisões estratégicas e otimizar recursos.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <form action="php/reserva_areas.php" method="POST">
-                        <!-- Campos do formulário de reservas aqui -->
-                        <div class="form-group">
-                            <label for="area">Área:</label>
-                            <input type="text" class="form-control" id="area" name="area" required>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Integração com Sistemas</h5>
+                            <p class="card-text">Integre o sistema com outras plataformas para melhor gestão.</p>
                         </div>
-                        <div class="form-group">
-                            <label for="data_reserva">Data da Reserva:</label>
-                            <input type="date" class="form-control" id="data_reserva" name="data_reserva" required>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Alertas e Notificações</h5>
+                            <p class="card-text">Receba alertas sobre manutenção, pagamentos e eventos.</p>
                         </div>
-                        <div class="form-group">
-                            <label for="usuario">Usuário:</label>
-                            <input type="text" class="form-control" id="usuario" name="usuario" required>
-                        </div>
-                        <button type="submit" class="btn btn-success">Salvar Reserva</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Manutenção Modal -->
-    <div class="modal fade" id="manutencaoModal" tabindex="-1" aria-labelledby="manutencaoModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="manutencaoModalLabel">Gestão de Manutenção</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+    <!-- Seção de Segurança -->
+    <section id="seguranca" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-aqua text-center">Segurança e Conformidade 🔒</h2>
+            <p class="lead text-center text-white">Garantia de proteção dos dados e conformidade com a LGPD.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card bg-secondary">
+                        <div class="card-body">
+                            <h5 class="card-title">Proteção de Dados</h5>
+                            <p class="card-text">Garantia de segurança dos dados pessoais dos moradores.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <form action="php/chamados.php" method="POST">
-                        <!-- Campos do formulário de chamados de manutenção aqui -->
-                        <div class="form-group">
-                            <label for="descricao_chamado">Descrição do Chamado:</label>
-                            <input type="text" class="form-control" id="descricao_chamado" name="descricao_chamado"
-                                required>
+                <div class="col-md-4">
+                    <div class="card bg-secondary">
+                        <div class="card-body">
+                            <h5 class="card-title">Política de Privacidade</h5>
+                            <p class="card-text">Transparência nas práticas de coleta e uso de dados.</p>
                         </div>
-                        <div class="form-group">
-                            <label for="prioridade">Prioridade:</label>
-                            <select class="form-control" id="prioridade" name="prioridade" required>
-                                <option value="Baixa">Baixa</option>
-                                <option value="Média">Média</option>
-                                <option value="Alta">Alta</option>
-                            </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-secondary">
+                        <div class="card-body">
+                            <h5 class="card-title">Compliance e Auditoria</h5>
+                            <p class="card-text">Auditorias regulares para garantir conformidade com a legislação.</p>
                         </div>
-                        <button type="submit" class="btn btn-success">Abrir Chamado</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- FAQ -->
+    <!-- Seção de FAQ -->
+    <section id="faq" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-grey text-center">Perguntas Frequentes (FAQ) ❓</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                Como faço para acessar minha área como síndico?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Você pode acessar sua área como síndico através do menu principal na navbar, clicando em
+                            "Área do Síndico".
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Como faço uma reserva de área comum?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Você pode agendar uma reserva de áreas comuns através da seção "Área do Morador".
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Como posso fazer uma reclamação?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Você pode registrar suas reclamações na seção "Chamados e Reclamações" da área do morador.
+                        </div>
+                    </div>
+                </div>
+                <!-- Adicione mais perguntas e respostas conforme necessário -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Contato -->
+    <section id="contato" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-aqua text-center">Fale Conosco 📧</h2>
+            <form action="mailto:dev.gbrlsouza@gmail.com" method="POST" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name" class="text-white">Nome</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="text-white">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Seu email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="text-white">Mensagem</label>
+                    <textarea class="form-control" id="message" name="message" rows="5"
+                        placeholder="Escreva sua mensagem aqui" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>© 2024 CondoMaster - Todos os direitos reservados.</p>
+    <footer class="py-4 bg-dark">
+        <div class="container text-center">
+            <p class="text-white">© 2024 CondoMaster. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

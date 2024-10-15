@@ -1,0 +1,70 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #555; 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ffff; 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ccc; 
+}
+
+.text-grey {
+    color: #555 !important;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-aqua {
+    color: #00ffff !important;
+}
+
+.bg-gradient {
+    background: linear-gradient(to right, #000000, #00ffff);
+}
+
+.card {
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    padding: 100px 0;
+    background: linear-gradient(to right, #000000, #00ffff);
+}
+
+.accordion .card {
+    border: none;
+}
+
+.accordion .card-header {
+    background-color: #343a40;
+}
+
+.accordion .btn-link {
+    color: aqua;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.accordion .btn-link:hover {
+    text-decoration: underline;
+}
+
+.accordion .collapse {
+    background-color: #f8f9fa;
+    color: #212529;
+}
